@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+    <script src="confet.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Rock Paper Scissor</h1>
+        <div class="scoreboard">
+            <h2>Score</h2>
+            <div class="score-container">
+                <div class="score-box">
+                    <p>Player</p>
+                    <span id="user-score">0</span>
+                </div>
+                <div class="score-box">
+                    <p>CPU</p>
+                    <span id="cpu-score">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2 id="status-message">Choose your move!</h2>
+        <div class="game-container">
+            <div class="player-side">
+                <h3>You</h3>
+                <div class="choices" id="player-choices">
+                    <button class="choice-btn" data-choice="0" aria-label="Rock">
+                        <img src="hand-fist-solid.svg" alt="Rock">
+                    </button>
+                    <button class="choice-btn" data-choice="1" aria-label="Paper">
+                        <img src="hand-solid.svg" alt="Paper">
+                    </button>
+                    <button class="choice-btn" data-choice="2" aria-label="Scissors">
+                        <img src="hand-scissors-solid.svg" alt="Scissors">
+                    </button>
+                </div>
+            </div>
+            <div class="computer-side">
+                <h3>Computer</h3>
+                <div class="choices">
+                    <div class="choice-display" id="cpu-choice-display">
+                        <img src="gem-solid.svg" alt="Question Mark">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <canvas id="confetti-canvas"></canvas>
+</body>
+
+</html>
