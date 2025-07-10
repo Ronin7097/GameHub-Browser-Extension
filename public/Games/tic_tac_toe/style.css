@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Playwrite+AR:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mukta', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playwrite AR', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.score-item {
+    background-color: #2ecc71;
+    padding: 10px 20px;
+    border-radius: 8px;
+    min-width: 100px;
+}
+
+.score-item p {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.score-item span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.player-x {
+    background-color: #3498db;
+}
+
+.player-o {
+    background-color: #e74c3c;
+}
+
+.draw-score {
+    background-color: #95a5a6;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 0 auto 30px auto;
+    width: 320px;
+    height: 320px;
+}
+
+.cell {
+    background-color: #4a6984;
+    border: none;
+    border-radius: 8px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #5a7a94;
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+}
+
+.cell.x-mark {
+    color: #3498db;
+}
+
+.cell.o-mark {
+    color: #e74c3c;
+}
+
+.button-89 {
+    --b: 3px;
+    --s: .45em;
+    --color: #f1c40f;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-89:active {
+    background: var(--color);
+    color: #fff;
+}
+
+.status-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        width: 260px;
+        height: 260px;
+    }
+
+    .cell {
+        font-size: 2.5rem;
+    }
+
+    .score-item {
+        padding: 8px 15px;
+        min-width: 80px;
+    }
+
+    .score-item span {
+        font-size: 1.8rem;
+    }
+
+    .status-message {
+        font-size: 1.2rem;
+    }
+}
