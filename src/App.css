@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr)); /* Changed to 3 columns */
+  gap: 20px; /* Reduced gap */
+  justify-content: center;
+  margin-bottom: 40px;
+  max-width: 700px; /* Added max-width to control grid size */
+}
+
+.game-card {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff6b6b;
+  padding: 15px; /* Reduced padding */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px; /* Reduced min-height */
+}
+
+.game-card:hover {
+  background-color: #ee5253;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-icon {
+  width: 60px; /* Adjusted icon size */
+  height: 60px; /* Adjusted icon size */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.game-card p {
+  font-size: 1.2em; /* Adjusted font size */
+  font-weight: bold;
+}
+
+.add-website-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  display: flex; /* Added flex for icon alignment */
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+.add-website-btn:hover {
+  background-color: #218838;
+}
+
+.add-website-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.add-website-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1em;
+}
+
+.add-website-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.add-website-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.add-website-form button:hover {
+  background-color: #0056b3;
+}
+
+.custom-websites-list {
+  width: 100%;
+  max-width: 400px;
+}
+
+.custom-websites-list h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #f1c40f;
+}
+
+.custom-websites-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-websites-list li {
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: left;
+  display: flex; /* Added flex for layout */
+  justify-content: space-between; /* Space between link and buttons */
+  align-items: center;
+}
+
+.custom-website-link {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  flex-grow: 1; /* Allow link to take available space */
+}
+
+.custom-website-link:hover {
+  text-decoration: underline;
+}
+
+.website-favicon {
+  width: 24px; /* Favicon size */
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.website-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.website-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.website-actions .edit-btn {
+  background-color: #ffc107; /* Yellow for edit */
+}
+
+.website-actions .edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.website-actions .remove-btn {
+  background-color: #dc3545; /* Red for remove */
+}
+
+.website-actions .remove-btn:hover {
+  background-color: #c82333;
+}

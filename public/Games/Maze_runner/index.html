@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Maze Runner</h1>
+        
+        <div class="game-info">
+            <div class="stats">
+                <span>Level: <span id="level-display">1</span></span>
+                <span>Time: <span id="time-display">0:00</span></span>
+                <span>Best Time: <span id="best-time-display">--:--</span></span>
+            </div>
+            
+            <div class="controls-info">
+                <span>Use WASD or Arrow Keys to move</span>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <canvas id="maze-canvas"></canvas>
+        </div>
+        
+        <div class="game-controls">
+            <button id="new-maze-btn" class="btn">New Maze</button>
+            <button id="reset-btn" class="btn">Reset Position</button>
+            <select id="difficulty-select" class="difficulty-select">
+                <option value="easy">Easy (15x15)</option>
+                <option value="medium">Medium (21x21)</option>
+                <option value="hard">Hard (31x31)</option>
+            </select>
+        </div>
+        
+        <div id="game-message" class="game-message hidden"></div>
+        
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <ul>
+                <li>Navigate through the maze to reach the red exit</li>
+                <li>Use WASD or Arrow Keys to move</li>
+                <li>Try to complete each level as fast as possible</li>
+                <li>Each difficulty has different maze sizes</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
