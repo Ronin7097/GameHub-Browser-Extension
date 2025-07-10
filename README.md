@@ -25,7 +25,7 @@ To get this project up and running locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/games.git
+    git clone https://github.com/Ronin7097/GameHub-Browser-Extension.git
     cd games
     ```
 
@@ -33,14 +33,8 @@ To get this project up and running locally, follow these steps:
     ```bash
     npm install
     ```
-
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-    This will start the Vite development server.
-
-4.  **Load the extension in your browser:**
+    
+3.  **Load the extension in your browser:**
 
     *   **Chrome/Brave/Edge:**
         1.  Open your browser and navigate to `chrome://extensions` (or `brave://extensions`, `edge://extensions`).
